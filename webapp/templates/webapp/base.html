@@ -2,28 +2,36 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ProjectX</title>
-    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/flatly/bootstrap.min.css">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://bootswatch.com/5/flatly/bootstrap.min.css"
+    />
     <link rel="stylesheet" type="text/css" href="{% static "css/styles.css" %}">
+  </head>
+  <body>
+    <!-- create navbar here -->
 
-</head>
-<body>
+    {% include "webapp/navbar.html" %}
 
- <!-- create navbar here -->
+    <div class="container">
+      <br />
 
- <div class="container">
+      {% block content %}
+      
+      
+      
+      {% endblock %}
 
-    <br>
+      <!-- notification messages -->
+    </div>
 
-    <!-- notification messages -->
- </div>
-
-   
-
+    <script src="{% static "js/app.js" %}"></script>
 
     
-</body>
+  </body>
 </html>

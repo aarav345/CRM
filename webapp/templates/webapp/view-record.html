@@ -1,0 +1,25 @@
+{% extends "webapp/base.html" %}
+
+{% block content %}
+
+<body>
+    <div class="card">
+        <strong>
+            {{record.last_name | upper}}
+            {{ record.first_name | upper}}
+        </strong>
+        <div class="card-body">
+            <p><strong> ID: </strong></p> {{ record.id}}
+            <p><strong> Email: </strong></p> {{ record.email}}
+
+            <p><strong> Phone Number: </strong></p> {{ record.phone}}
+
+            <p><strong> Address: </strong></p> {{ record.address}}
+
+
+
+        </div>
+    </div>
+</body>   
+
+{% endblock  %}
